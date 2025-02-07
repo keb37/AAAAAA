@@ -1,0 +1,217 @@
+/* ตั้งค่าพื้นฐาน */
+body {
+    font-family: 'Arial', sans-serif;
+    margin: 0;
+    padding: 0;
+    background: linear-gradient(135deg, #f2eb29, #f39c12); /* พื้นหลังแบบไล่สี */
+    color: #333;
+    overflow-x: hidden; /* ไม่ให้เลื่อนด้านข้าง */
+}
+.top-left {
+    position: absolute;
+    top: 2%;
+    left: 50%;
+    transform: translateX(-50%);
+    background: rgba(255, 255, 255, 0.8);
+    padding: 5px 20px;
+    border-radius: 50px;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.2);
+    opacity: 0;
+    transform: translate(-50%, -20px);
+    animation: fadeInBounce 0.8s ease-out forwards;
+}
+/* Animation หน้าแรก*/
+
+@keyframes fadeInBounce {
+    0% {
+        opacity: 0;
+        transform: translate(-50%, -20px);
+    }
+    60% {
+        opacity: 1;
+        transform: translate(-50%, 5px);
+    }
+    100% {
+        opacity: 1;
+        transform: translate(-50%, 0);
+    }
+}
+
+/* เมนูด้านบน */
+.menu {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    background-color: #ffbf00;
+    padding: 10px 0;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+}
+
+.menu ul {
+    list-style: none;
+    margin: 0;
+    padding: 0;
+    display: flex;
+    justify-content: center;
+}
+
+.menu li {
+    margin: 0 15px;
+}
+
+.menu a {
+    text-decoration: none;
+    font-size: 1rem;
+    color: #fff;
+    transition: color 0.3s ease;
+}
+
+.menu a:hover {
+    color: #333;
+}
+
+/* กล่องเนื้อหาหลัก */
+.container {
+    text-align: center;
+    background: #fff;
+    padding: 40px;
+    border-radius: 20px;
+    box-shadow: 0 8px 12px rgba(0, 0, 0, 0.2);
+    max-width: 600px;
+    margin: 100px auto; /* จัดให้อยู่ตรงกลาง */
+    animation: fadeIn 1.5s ease;
+}
+/* Animation แนะนำ*/
+@keyframes fadeIn {
+    from {
+        opacity: 0;
+        transform: translateY(-20px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+
+.container h1 {
+    font-size: 2.5rem;
+    color: #f39c12;
+    margin-bottom: 20px;
+}
+
+.container .highlight {
+    color: #e74c3c;
+}
+
+.container p {
+    font-size: 1.2rem;
+    color: #666;
+    margin-bottom: 20px;
+}
+
+.container .start-link {
+    display: inline-block;
+    background-color: #f39c12;
+    color: #fff;
+    padding: 10px 25px;
+    font-size: 1rem;
+    border-radius: 25px;
+    text-decoration: none;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    transition: all 0.3s ease;
+}
+
+.container .start-link:hover {
+    background-color: #e67e22;
+    transform: scale(1.05); /* ขยายเล็กน้อยเมื่อชี้เมาส์ */
+    box-shadow: 0 6px 12px rgba(0, 0, 0, 0.2);
+}
+
+/* Login */
+.login-container {
+    width: 200px;
+    margin: 30 auto;
+    padding: 15px;
+    height: auto;
+    background: white;
+    border-radius: 10px;
+    box-shadow: 0 8px 12px rgba(0, 0, 0, 0.2);
+    position: absolute;
+    top: 20px;
+    left: 1%;
+    text-align: center;
+    animation: fadeInUp 0.6s ease-out;
+}
+.login-container h2 {
+    font-size: 1rem;
+    text-align: center;
+    margin-bottom: 10px;
+    line-height: 1.2;
+}
+
+.input-group {
+    margin-bottom: 15px;
+}
+
+.input-group label {
+    display: block;
+    font-size: 0.8rem;
+    margin-bottom: 5px;
+}
+
+.input-group input {
+    width:100%;
+    padding: 5px 0px 5px;
+    font-size: 0.8rem;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    margin-bottom: 10px;
+}
+
+.login-button {
+    width: 100%;
+    padding: 10px;
+    background-color: #f39c12;
+    color: white;
+    border: none;
+    border-radius: 25px;
+    font-size: 1rem;
+    cursor: pointer;
+}
+
+.login-button:hover {
+    background-color: #e67e22;
+    transform: scale(1.05);
+    box-shadow: 0 6px 12px rgba(0, 0, 0, 0.2);
+}
+
+p {
+    text-align: center;
+    font-size: 1rem;
+}
+
+p a {
+    color: #f39c12;
+    text-decoration: none;
+}
+
+p a:hover {
+    text-decoration: underline;
+}
+
+/* Keyframes Animation Login */
+@keyframes fadeInUp {
+    from {
+        opacity: 0;
+        transform: translateY(20px); /* เริ่มต้นจากข้างล่าง */
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0); /* มาที่ตำแหน่งปกติ */
+    }
+}
+
+
+

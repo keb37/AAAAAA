@@ -1,0 +1,222 @@
+/* Thai */
+body {
+    font-family: Arial, sans-serif;
+    background-color: #f4f4f4;
+    margin: 0;
+    padding: 0;
+}
+
+header {
+    background-color: #ee9e07;
+    color: white;
+    text-align: center;
+    padding: 1rem;
+}
+
+.container {
+    max-width: 800px;
+    margin: 20px auto;
+    padding: 20px;
+}
+
+.food-card {
+    background-color: white;
+    margin-bottom: 20px;
+    padding: 15px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+ }
+
+ .food-card img {
+    width: 100%;
+    
+    height: auto;
+    border-radius: 8px;
+    
+}  
+
+.food-card h2 {
+    color: #333;
+}
+
+.food-card p {
+    color: #555;
+}
+
+.food-card a {
+    display: inline-block;
+    margin-top: 10px;
+    color: #4CAF50;
+    text-decoration: none;
+}
+
+.food-card a:hover {
+    text-decoration: underline;
+}
+
+/* Chiana */
+
+body.page2 {
+    font-family: Arial, sans-serif;
+    background-color: #f4f4f4;
+    margin: 0;
+    padding: 0;
+}
+
+.header1 {
+    background-color: #e7260d;
+    color: white;
+    text-align: center;
+    padding: 1rem;
+}
+
+.container1 {
+    max-width: 800px;
+    margin: 20px auto;
+    padding: 20px;
+}
+
+.foodcard1 {
+    background-color: white;
+    margin-bottom: 20px;
+    padding: 15px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+ }
+
+ .foodcard1 img {
+    width: 100%;
+    
+    height: auto;
+    border-radius: 8px;
+    
+}  
+
+.foodcard1 h2 {
+    color: #333;
+}
+
+.foodcard1 p {
+    color: #555;
+}
+
+.foodcard1 a {
+    display: inline-block;
+    margin-top: 10px;
+    color: #4CAF50;
+    text-decoration: none;
+}
+
+.foodcard1 a:hover {
+    text-decoration: underline;
+}
+
+/* Japan */
+body.page3 {
+    font-family: Arial, sans-serif;
+    background-color: #f4f4f4;
+    margin: 0;
+    padding: 0;
+}
+
+.header2 {
+    background: linear-gradient(135deg, #f14313, #c13405);
+    color: white;
+    text-align: center;
+    padding: 1rem;
+}
+
+.container2 {
+    max-width: 800px;
+    margin: 20px auto;
+    padding: 20px;
+}
+
+.foodcard2 {
+    background-color: white;
+    margin-bottom: 20px;
+    padding: 15px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+ }
+
+ .foodcard2 img {
+    width: 100%;
+    
+    height: auto;
+    border-radius: 8px;
+    
+}  
+
+.foodcard2 h2 {
+    color: #333;
+}
+
+.foodcard2 p {
+    color: #555;
+}
+
+.foodcard2 a {
+    display: inline-block;
+    margin-top: 10px;
+    color: #4CAF50;
+    text-decoration: none;
+}
+
+.foodcard2 a:hover {
+    text-decoration: underline;
+}
+
+/* Korea */
+body.page4 {
+    font-family: Arial, sans-serif;
+    background-color: #f4f4f4;
+    margin: 0;
+    padding: 0;
+}
+
+.header3 {
+    background-color: #d20ab470;
+    color: white;
+    text-align: center;
+    padding: 1rem;
+}
+
+.container3 {
+    max-width: 800px;
+    margin: 20px auto;
+    padding: 20px;
+}
+
+.foodcard3 {
+    background-color: white;
+    margin-bottom: 20px;
+    padding: 15px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+ }
+
+ .foodcard3 img {
+    width: 100%;
+    
+    height: auto;
+    border-radius: 8px;
+    
+}  
+
+.foodcard3 h2 {
+    color: #333;
+}
+
+.foodcard3 p {
+    color: #555;
+}
+
+.foodcard3 a {
+    display: inline-block;
+    margin-top: 10px;
+    color: #4CAF50;
+    text-decoration: none;
+}
+
+.foodcard3 a:hover {
+    text-decoration: underline;
+}
+
+
