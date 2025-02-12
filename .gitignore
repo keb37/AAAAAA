@@ -1,0 +1,146 @@
+index.html
+  <div class="container"> <!-- ส่วนกลางของหน้า -->
+        <h1>Welcome to <span class="highlight">Random Food Picker</span></h1> <!-- ข้อความหลัก -->
+        <p>Find your next meal with just a click!</p> <!-- คำอธิบาย -->
+        <a href="randomfood.html" class="start-link">Go to Random Food Picker</a> <!-- ลิงก์ไปหน้าสุ่มอาหาร -->
+    </div>
+
+index.css
+body {
+    font-family: "Poppins", Arial, sans-serif; /* กำหนดฟอนต์หลัก */
+    display: flex; /* ใช้ Flexbox เพื่อจัดวางองค์ประกอบ */
+    flex-direction: column; /* จัดเรียงเป็นแนวตั้ง */
+    justify-content: center; /* จัดกึ่งกลางแนวตั้ง */
+    align-items: center; /* จัดกึ่งกลางแนวนอน */
+    height: 100vh; /* กำหนดความสูงเต็มจอ */
+    margin: 0; /* ลบขอบของ body */
+    background: linear-gradient(135deg, #4facfe, #00f2fe); /* ทำพื้นหลังไล่สี */
+}
+
+.container {
+    text-align: center; /* จัดข้อความตรงกลาง */
+    background: #fff; /* พื้นหลังสีขาว */
+    padding: 50px; /* ระยะห่างภายในกล่อง */
+    border-radius: 16px; /* ทำให้ขอบมน */
+    box-shadow: 0 10px 20px rgba(0, 0, 0, 0.15); /* เพิ่มเงาให้กล่อง */
+    transition: transform 0.3s ease-in-out; /* เพิ่มเอฟเฟกต์ขยายเมื่อ hover */
+}
+
+.container:hover {
+    transform: scale(1.02); /* ขยายเล็กน้อยเมื่อโฮเวอร์ */
+}
+
+h1 {
+    font-size: 2.5rem; /* กำหนดขนาดตัวอักษร */
+    color: #333; /* สีตัวอักษร */
+    font-weight: 600; /* ความหนาของตัวอักษร */
+    text-shadow: 2px 2px 10px rgba(0, 0, 0, 0.1); /* เพิ่มเงาให้ตัวอักษร */
+}
+
+button {
+    margin-top: 25px; /* ระยะห่างด้านบน */
+    padding: 12px 24px; /* ขนาดของปุ่ม */
+    font-size: 1.2rem; /* ขนาดตัวอักษร */
+    font-weight: bold; /* ตัวหนา */
+    color: #fff; /* สีตัวอักษรขาว */
+    background: linear-gradient(45deg, #007bff, #0056b3); /* ทำปุ่มเป็นไล่สี */
+    border: none; /* ไม่มีขอบ */
+    border-radius: 8px; /* ทำให้ขอบปุ่มมน */
+    cursor: pointer; /* เปลี่ยนเป็น pointer เมื่อชี้ */
+    box-shadow: 0 5px 15px rgba(0, 123, 255, 0.3); /* เพิ่มเงา */
+    transition: all 0.3s ease; /* ทำให้ปุ่มมีเอฟเฟกต์ */
+}
+
+button:hover {
+    background: linear-gradient(45deg, #0056b3, #004099); /* เปลี่ยนสีเมื่อ hover */
+    box-shadow: 0 8px 20px rgba(0, 123, 255, 0.4); /* เพิ่มเงา */
+    transform: translateY(-2px); /* ขยับขึ้นเล็กน้อย */
+}
+
+button:active {
+    transform: translateY(1px); /* กดแล้วขยับลงเล็กน้อย */
+    box-shadow: 0 5px 10px rgba(0, 123, 255, 0.2); /* ลดเงา */
+}
+
+/* สไตล์สำหรับผลลัพธ์อาหาร */
+.result {
+    margin-top: 20px; /* ระยะห่างด้านบน */
+    font-size: 1.8rem; /* ขนาดตัวอักษร */
+    font-weight: bold; /* ตัวหนา */
+    color: white; /* สีตัวอักษรขาว */
+    background: #28a745; /* พื้นหลังสีเขียว */
+    padding: 15px; /* ระยะห่างภายในกล่อง */
+    border-radius: 10px; /* ทำให้ขอบมน */
+    display: inline-block; /* ทำให้กล่องไม่เต็มบรรทัด */
+    box-shadow: 0 5px 10px rgba(0, 0, 0, 0.2); /* เพิ่มเงา */
+}
+
+/* สไตล์ของ Emoji */
+.Emoji {
+    position: absolute; /* จัดตำแหน่งแบบ absolute */
+    top: 5%; /* ตำแหน่งด้านบน */
+    left: 50%; /* ตำแหน่งกึ่งกลาง */
+    transform: translateX(-50%); /* จัดให้อยู่ตรงกลางพอดี */
+    font-size: 3rem; /* ขนาดใหญ่ */
+    text-align: center; /* จัดให้อยู่ตรงกลาง */
+}
+
+/* Animation */
+@keyframes fadeIn {
+    from {
+        opacity: 0; /* เริ่มต้นโปร่งใส */
+        transform: translateY(-10px); /* เริ่มต้นขยับขึ้น */
+    }
+    to {
+        opacity: 1; /* แสดงเต็มที่ */
+        transform: translateY(0); /* กลับมาที่เดิม */
+    }
+}
+
+
+funtion.js
+function pickRandomFood() {
+  const foods = ["ซันนักจี"]; // รายการอาหาร (ตอนนี้มีแค่อันเดียว)
+  const resultDiv = document.getElementById('result'); // ดึง element ที่ใช้แสดงผลลัพธ์
+  let count = 0; // ตัวนับรอบการสุ่ม
+   
+  // ใช้ setInterval เพื่อให้สุ่มไปเรื่อยๆ ทุก 200ms
+  const interval = setInterval(() => {
+      const randomIndex = Math.floor(Math.random() * foods.length); // สุ่ม index ของอาหาร
+      resultDiv.textContent = `กำลังสุ่ม⏳: ${foods[randomIndex]}`; // แสดงผลลัพธ์ชั่วคราว
+      count++;
+  }, 200); // เปลี่ยนอาหารทุก 0.2 วินาที (200ms)
+
+  // ใช้ setTimeout เพื่อหยุดหลังจาก 3 วินาที
+  setTimeout(() => {
+      clearInterval(interval); // หยุดการสุ่ม
+      const finalIndex = Math.floor(Math.random() * foods.length); // สุ่มอาหารสุดท้าย
+      resultDiv.textContent = `อาหารที่คุณได้คือ: ${foods[finalIndex]}!`; // แสดงผลลัพธ์สุดท้าย
+  }, 3000); // หยุดสุ่มหลัง 3 วินาที
+}
+
+
+
+ให้ผู้ใช้สามารถเพิ่มอาหารใหม่เข้าไปในตัวเลือกได้
+
+javascript
+คัดลอก
+แก้ไข
+function addFood(newFood) {
+    const resultDiv = document.getElementById('result');
+    
+    if (!newFood.trim()) {
+        resultDiv.textContent = "⚠️ กรุณากรอกชื่ออาหาร!";
+        return;
+    }
+
+    foods.push(newFood.trim()); // เพิ่มอาหารเข้าไปใน array
+    resultDiv.textContent = `✅ เพิ่ม "${newFood}" ลงในรายการแล้ว!`;
+}
+✅ ใช้งาน:
+
+javascript
+คัดลอก
+แก้ไข
+
+
