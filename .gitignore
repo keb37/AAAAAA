@@ -122,7 +122,6 @@ function pickRandomFood() {
 
 
 ให้ผู้ใช้สามารถเพิ่มอาหารใหม่เข้าไปในตัวเลือกได้
-
 javascript
 คัดลอก
 แก้ไข
@@ -139,8 +138,19 @@ function addFood(newFood) {
 }
 ✅ ใช้งาน:
 
-javascript
-คัดลอก
-แก้ไข
+
+ให้ผู้ใช้เห็นว่าตอนนี้มีอาหารอะไรบ้างในตัวเลือก
+function showFoods() {
+    const resultDiv = document.getElementById('result');
+    
+    if (foods.length === 0) {
+        resultDiv.textContent = "❌ ไม่มีรายการอาหาร!";
+    } else {
+        resultDiv.textContent = "🍽️ รายการอาหาร: " + foods.join(", ");
+    }
+}
+✅ ใช้งาน:
+
+
 
 
